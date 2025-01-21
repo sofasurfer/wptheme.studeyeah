@@ -1,0 +1,53 @@
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+.c-bg-light {
+	background-color: $bg-light;
+    background-color: var(--bg-light);
+}
+
+/* ==========================================================================
+  Cookie notice
+   ========================================================================== */
+
+.c-cookie-notice{
+    display: none;
+    position: fixed;
+	right: 0;
+    bottom: 30px;
+    width: 400px;
+    padding: 1.5rem 30px;
+    background-color: $bg-light;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.5;
+    text-align: left;
+	border: solid 1px $border-basic;
+    border-color: var(--border-basic);
+	border-right: none;
+}
+
+.c-text-block .c-cookie-notice-list {
+    padding-bottom: 0;
+}
+
+.c-text-block .c-cookie-notice-list li::before {
+    background: transparent;
+}
+
+.c-text-block .c-cookie-notice-list li {
+    display: inline-block;
+    padding: 0.5em 0.5em 0 0;
+}
+
+@media only screen and (max-width:767px) {    
+	.c-cookie-notice {
+		width: 100%;
+		bottom: 0;
+		border: none;
+		border-top: solid 1px $border-basic;
+        border-color: var(--border-basic);
+	}
+}

@@ -1,0 +1,240 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+html {
+	font-size: 18px;
+    font-size: var(--font-size-root);
+}
+
+/* ==========================================================================
+   Titles
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+    font-weight: var(--font-weight-bold);
+    text-wrap:balance;
+}
+
+h1,
+.c-h1 {
+	padding-bottom: .5em;
+	line-height: 1.1;
+	font-size: 4.44rem; /* 80px */
+    font-size: var(--font-size-h1);
+}
+
+h2,
+.c-h2 {
+	padding-bottom: .5em;
+	line-height: 1.2;
+	font-size: 2.22rem; /* 40px */
+    font-size: var(--font-size-h2);
+}
+
+h3,
+.c-h3 {
+	padding-bottom: 0.5em;
+	line-height: 1.5;
+	font-size: 1.33rem;
+    font-size: var(--font-size-h3);
+}
+
+/* ==========================================================================
+   Basic Text Content
+   ========================================================================== */
+
+.c-content,
+.c-footer {
+	line-height: 1.5;
+}
+
+.c-text-block p {
+	padding-bottom: 1.5em;
+}
+
+.c-text-block p + h2,
+.c-text-block p + h3,
+.c-text-block p + h4,
+.c-text-block ul + p,
+.c-text-block ul + h2,
+.c-text-block ul + h3,
+.c-text-block ul + h4,
+.c-text-block ul + ol,
+.c-text-block ol + p,
+.c-text-block ol + h2,
+.c-text-block ol + h3,
+.c-text-block ol + h4 {
+	padding-top: 1.5em;
+}
+
+.c-lead {
+    line-height: 1.33;
+	font-size: 1.33rem;
+    font-size: var(--font-size-lead);
+    text-wrap:balance;
+}
+
+.c-text-small,
+.c-text-block blockquote cite,
+.c-footer-disclaimer {
+	font-size: 0.77rem; /* 14px */
+    font-size: var(--font-size-body-s);
+}
+
+.c-legend {
+	display: block;
+	padding-top: 1em;
+    font-size: var(--font-size-body-s);
+}
+
+
+/* ==========================================================================
+   Basic Lists Content 
+   ========================================================================== */
+
+.c-text-block ul,
+.c-text-block ol {
+	margin: 0;
+	padding: 0 0 1.5em 0;
+	list-style: none;
+}
+
+.c-text-block ul li,
+.c-text-block ol li {
+	position: relative;
+	padding-left: 34px;
+}
+
+.c-text-block ul li + li,
+.c-text-block ol li + li {
+	margin-top: 0.5em;
+}
+
+.c-text-block ul li::before {
+	content:'';
+	position: absolute;
+    top: 0.58em;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $color-highlight;
+    background-color: var(--color-highlight);
+}
+
+.c-text-block ol {
+	counter-reset: custom-counter;
+}
+
+.c-text-block ol li {
+	counter-increment: custom-counter;
+}
+
+.c-text-block ol li::before {
+	content: counter(custom-counter) ". ";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 26px;
+	color: $text-color;
+    color: var(--text-color);
+	font-weight: bold;
+    font-weight: var(--font-weight-bold);
+	text-align: right;
+}
+
+/* ==========================================================================
+   Quote
+   ========================================================================== */
+
+.c-text-block blockquote {
+	margin: 0;
+	padding: 0 0 3rem 0;
+}
+
+.c-text-block blockquote p {
+	position: relative;
+	padding: 2.6rem 0 0 0;
+	line-height: 1.25;
+	font-size: 2.22rem; /* 40px */
+    font-size: var(--font-size-quote);
+    text-wrap:balance;
+}
+
+.c-text-block blockquote p::before {
+	content: '\201C';
+	display: block;
+	position: absolute;
+	left: -31px;
+	top: -2.8rem;
+	font-size: 14.44rem;
+	color: $border-basic;
+    color: var(--border-basic);
+	font-weight: bold;
+    font-weight: var(--font-weight-bold);
+	z-index: -1;
+}
+
+.c-text-block blockquote cite {
+	padding-top: 1.5em;
+	font-style: normal;
+}
+
+/* ==========================================================================
+   Text helpers
+   ========================================================================== */
+
+.c-text-right {
+	text-align: right;
+}
+
+.c-text-center {
+	text-align: center;
+}
+
+.c-text-light {
+	color: $text-color-light;
+    color: var(--text-color-light);
+}
+
+/* ==========================================================================
+   Text sizes responsive
+   ========================================================================== */
+
+@media only screen and (max-width:1360px) {
+	h1, .c-h1,
+	h2, .c-h2,
+	h3, .c-h3{
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		-ms-word-break: break-all;
+		word-break: break-all;
+		word-break: break-word;
+		-ms-hyphens: auto;
+		-moz-hyphens: auto;
+		-webkit-hyphens: auto;
+		hyphens: auto;
+	}
+}
+
+@media only screen and (max-width:767px) {	    
+    :root {
+        --font-size-root: 16px;
+        --font-size-h1: 2rem; 
+        --font-size-h2: 1.5rem;
+        --font-size-h3: 1.125rem;
+        --font-size-lead: 1.25rem;
+        --font-size-quote: 1.5rem;
+        --font-size-body: 1rem;
+        --font-size-body-s: 0.875rem;
+    }
+}
+
+

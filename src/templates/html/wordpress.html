@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de" id="open-navigation">
+<head>
+    <meta charset="utf-8">
+    <title>Prototype</title>
+    <meta name="author" content="neofluxe GmbH">
+
+    <!-- Preventing IE11 to request by default the /browserconfig.xml more than one time -->
+    <meta name="msapplication-config">
+    <!-- Disable touch highlighting in IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Ensure edge compatibility in IE (HTTP header can be set in web server config) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <!-- Force viewport width and pixel density. Plus, disable shrinking. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Disable Skype browser-plugin -->
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    
+    <!-- google font-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
+    
+</head>
+
+<body>
+
+<!-- header-->
+<header class="c-header" role="banner">
+    <!-- header inner-->
+    <div class="c-container c-container-no-padding c-header-inner">
+        <div class="c-header-logo">
+            <a href="/">
+                <!--<img src="../../images/logo.svg" alt="" />-->
+                Insert Logo
+            </a>
+        </div>
+
+        <nav class="c-main-nav">
+            <ul class="c-main-nav-list">
+                <li class="c-active"><a href="">Architektur</a></li>
+                <li><a href="">Dienstleistung</a></li>
+                <li><a href="">Verkauf</a></li>
+                <li><a href="">Büro</a></li>
+            </ul>
+        </nav>
+
+        <!-- offcanvas trigger-->
+        <a href="#open-navigation" class="c-offcanvas-trigger c-offcanvas-trigger-open">
+            <span class="c-hide-visually">Menü öffnen</span>
+        </a>
+    </div>
+
+    <!-- offcanvas nav-->
+    <nav class="c-offcanvas-nav">
+        <div class="c-offcanvas-inner">
+            <div class="c-container c-container-no-padding c-header-inner">
+                <!-- offcanvas trigger-->
+                <a href="#" class="c-offcanvas-trigger c-offcanvas-trigger-close">
+                    <span class="c-hide-visually">Menu schliessen</span>
+                </a>
+            </div>
+
+            <div class="c-container c-offcanvas-content">
+                <div class="c-row">
+                    <div class="c-col-12">
+                        <ul class="c-offcanvas-nav-list">
+                            <li class="c-active"><a href="">Architektur</a></li>
+                            <li><a href="">Dienstleistung</a></li>
+                            <li><a href="">Verkauf</a></li>
+                            <li><a href="">Büro</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- content-->
+<main class="c-content" role="main">
+   
+    <!-- responsive img tag -->
+    <div class="c-container">
+        <!-- wordpress generiert das ganze element automatisch. Angepasst werden kann z.B. die klasse. -->
+        <!-- so sind die klassen generiert: attachment-<grösse>, size-<grösse> - standardmässig gibt es folgende grössen: "thumbnail", "medium", "medium_large", "large", "full" -->
+        <img width="1600" height="900" src="../../images/tmp/img-placeholder.jpg" class="attachment-large size-large" alt="" decoding="async" loading="lazy" srcset="../../images/tmp/img-placeholder.jpg 1024w, ../../images/tmp/img-placeholder.jpg 300w, ../../images/tmp/img-placeholder.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px">
+    </div>
+
+    <!-- responsive picture/source/img tag -->
+    <div class="c-container">
+        <!-- das picture-tag inkl. allem HTML wird von uns generiert und ist daher flexibel. -->
+        <!-- standardmässig wird die klasse "c-picture" gesetzt. Im HTML beispiel musst du nicht das ganze HTML bauen. Nur so, dass es bei dir korrekt aussieht. Den rest machen wir. -->$
+        <picture class="c-picture">
+            <source srcset="../../images/tmp/img-placeholder.jpg 1024w, ../../images/tmp/img-placeholder.jpg 300w, ../../images/tmp/img-placeholder.jpg 768w" media="(min-width: 800px)">
+            <img src="../../images/tmp/img-placeholder.jpg" alt="" decoding="async" loading="lazy" srcset="../../images/tmp/img-placeholder.jpg 1024w, ../../images/tmp/img-placeholder.jpg 300w, ../../images/tmp/img-placeholder.jpg 768w" >
+        </picture>
+    </div>
+
+</main>
+
+<!-- footer-->
+<footer class="c-footer" role="contentinfo">
+    <!-- footer main-->
+    <div class="c-container c-container-no-padding c-footer-main">
+        Footer Main
+    </div>
+
+    <div class="c-container c-container-no-padding c-footer-disclaimer">
+        <div class="c-row c-row-reverse">
+            <div class="c-col-6 c-text-right">
+                <ul class="c-footer-disclaimer-list">
+                    <li><a href="/">Impressum</a></li>
+                    <li><a href="/">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="c-col-6">
+                &copy; neofluxe
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!-- cookie notice-->
+<div class="c-cookie-notice c-text-block c-text-small" id="cookie-notice">
+    <p>Diese Website benutzt Cookies. Wenn Sie die Website weiter nutzen, gehen wir von Ihrem Einverständnis aus.
+        <a href="/">Datenschutzerklärung.</a>
+    </p>
+    <a class="c-btn c-btn-small" href="#" id="accept-cookie-notice">OK</a>
+</div>
+</body>
+</html>

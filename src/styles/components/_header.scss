@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.c-header {
+	background-color: $bg-light;
+    background-color: var(--bg-light);
+	z-index: 10;
+}
+
+.c-header-inner {
+	height: 60px;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+}
+
+
+.c-header-logo {
+	position: relative;
+	width: 200px;
+	height: 40px;
+}
+
+.c-header-logo a {
+	display: block;
+}
+
+.c-header-sticky{
+	position: fixed;
+}
+
+/* ==========================================================================
+   lang 
+   ========================================================================== */
+
+.c-header-lang-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.c-header-lang-list li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.c-header-lang-list li {
+	display: inline-block;
+}
+
+.c-header-lang-list li + li {
+	padding-left: 1em;
+}
+
+.c-header-lang-list a {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 0.5em;
+}
+
+.c-header-lang-list a:focus,
+.c-header-lang-list a:hover,
+.c-header-lang-list .wpml-ls-current-language a {
+	text-decoration: underline;
+}
+
+/* ==========================================================================
+   main nav 
+   ========================================================================== */
+
+.c-main-nav {
+	justify-content: flex-end;
+}
+
+.c-main-nav-list {
+	margin: 0;
+	padding: 16px 0 0 0;
+	list-style: none;
+}
+
+.c-main-nav-list li {
+	display: inline-block;
+}
+
+.c-main-nav-list li + li {
+	padding-left: 2em;
+}
+
+
+.c-main-nav-list a {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 0.5em;
+}
+
+.c-main-nav-list a::before {
+	content:'';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 0;
+	background-color: $border-basic;
+    background-color: var(--border-basic);
+	transition: all 0.2s linear;
+}
+
+.c-main-nav-list a:focus::before,
+.c-main-nav-list a:hover::before,
+.c-main-nav-list .current-menu-item a::before {
+	height: 8px;
+}
+
+

@@ -1,0 +1,207 @@
+/* ==========================================================================
+   Link colors and styles
+   ========================================================================== */
+
+a[href^="tel:"] {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.c-text-block a {
+	background-image: linear-gradient(to bottom,$text-color-link 0%,$text-color-link 100%);
+    background-image: linear-gradient(to bottom,var(--text-color-link) 0%,var(--text-color-link) 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+  	transition: background .1s;
+}
+
+.c-text-block a:focus,
+.c-text-block a:hover {
+	background-size: 2px 2px;
+}
+
+.c-text-block .c-btn,
+.c-text-block .c-form-standard input[type="submit"],
+.c-text-block .c-link-arrow,
+.c-text-block .c-link-download,
+.c-text-block .c-link-extern,
+.c-text-block .c-link-back {
+	background-image: none;
+}
+
+/* ==========================================================================
+   skip link
+   ========================================================================== */
+
+.c-skip-link {
+    display: inline-block;
+    position: absolute;    
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    height: 1px;
+    width: 1px;  
+    overflow: hidden;    
+    white-space: nowrap; 
+    color: var(--color-highlight);
+    font-weight: var(--font-weight-bold);
+    border: solid 1px var(--color-highlight);
+    border-top: none;
+    border-radius: 0;
+    padding: 0.5em 20px;
+}
+
+.c-skip-link:focus {
+    position: absolute;
+    clip: auto;
+    clip-path: none;
+    height: auto;
+    width: auto;
+    overflow: auto;    
+    color: var(--color-highlight);
+}
+
+/* ==========================================================================
+   Button 
+   ========================================================================== */
+
+.c-btn,
+.c-form-standard input[type="submit"]{
+    display: inline-block;
+    margin: 0;
+	padding: 1.15em 40px 1.15em 40px;
+	border: none;
+	background-color: $text-color;
+    background-color: var(--text-color);
+    line-height: 1.2;
+    text-align: center;  
+	font-weight: bold;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-body);
+	transition: all 0.2s ease-out;
+	text-decoration: none;
+}
+
+.c-btn,
+.c-btn:visited,
+.c-form-standard input[type="submit"] {
+    color: $text-color-light;
+    color: var(--text-color-light);
+}
+
+.c-btn:hover, 
+.c-btn:focus,
+.c-form-standard input[type="submit"]:hover,
+.c-form-standard input[type="submit"]:focus {
+    color: $text-color-light;
+	background-color: $text-color;
+    color: var(--text-color-light);
+	background-color: var(--text-color);
+	text-decoration: none;
+}
+
+
+.c-btn-small,
+.c-btn-small:visited,
+.c-btn-small:hover,
+.c-btn-small:focus {
+   padding: 0.5em 20px;
+}
+
+/* ==========================================================================
+  links with icons
+   ========================================================================== */
+
+.c-icon {
+	position: relative;
+}
+
+.c-icon::before,
+.c-icon::after {
+	content:'';
+	position: absolute;
+	background-image:url(../../images/sprite.svg);
+	background-repeat: no-repeat;
+}
+
+.c-link-arrow,
+.c-link-download,
+.c-link-extern,
+.c-link-back {
+	display: inline-block;
+	padding-left: 40px;
+	font-weight: bold;
+    font-weight: var(--font-weight-bold);
+}
+
+.c-link-arrow::before,
+.c-link-back::before {
+	top: 0.25em;
+	left: 0;
+	width: 28px;
+	height: 16px;
+	background-position: 0 0;
+	transition: 0.1s ease-in-out;
+}
+
+.c-link-arrow:hover::before,
+.c-link-arrow:focus::before {
+	left: 4px;
+}
+
+
+.c-link-back::before {
+	background-position: 0 -120px;
+}
+
+.c-link-back:hover::before,
+.c-link-back:focus::before {
+	left: -4px;
+}
+
+.c-link-download::before {
+	top: -0.25em;
+	left: 0;
+	width: 20px;
+	height: 25px;
+	background-position: 0 -40px;
+}
+
+.c-link-download:hover::before,
+.c-link-download:focus::before {
+	background-position: -50px -40px;
+}
+
+.c-link-extern::before {
+	top: -0.28em;
+	left: 0;
+	width: 26px;
+	height: 26px;
+	background-position: 0 -80px;
+}
+
+.c-link-extern:hover::before,
+.c-link-extern:focus::before {
+	background-position: -50px -80px;
+}
+
+/* ==========================================================================
+  responsive
+   ========================================================================== */
+
+@media only screen and (max-width:767px) {   
+	.c-link-arrow::before,
+	.c-link-back::before {
+		top: 0.15em;
+	}
+	
+	.c-link-download::before {
+		top: -.35em;
+	}
+	
+	.c-link-extern::before {
+		top: -.38em;
+	}
+}

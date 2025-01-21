@@ -1,0 +1,18 @@
+.social-media {
+  display: flex;
+  gap: 5px;
+  list-style-type: none;
+  transition: all 0.2s ease-in-out;
+
+  &__item {
+    &:hover, &:focus, &:active {
+      scale: 1.1;
+    }
+
+    &__link {
+    }
+
+    &__icon {
+    }
+  }
+}

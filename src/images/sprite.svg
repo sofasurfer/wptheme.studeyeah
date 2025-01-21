@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="140px" viewBox="0 0 100 140" style="enable-background:new 0 0 100 140;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#1D1D1B;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<g id="icon-arrow">
+	<polyline id="Stroke-3" class="st0" points="19.9,1 26.6,8 19.9,15 	"/>
+	<line class="st0" x1="1" y1="8" x2="25.8" y2="8"/>
+</g>
+<g id="icon-download">
+	<line id="Stroke-1_00000176757414514741834770000016472505453178496385_" class="st0" x1="19" y1="64" x2="1" y2="64"/>
+	
+		<g id="Group" transform="translate(8.503643, 9.000000) rotate(90.000000) translate(-8.503643, -9.000000) translate(-0.496357, 2.000000)">
+		<polyline id="Stroke-3_00000075143117768041762260000017455457615062175397_" class="st0" points="51,-1 57.7,6 51,13 		"/>
+		<line id="Stroke-1_00000108276859675714075630000010598240128213866680_" class="st0" x1="41" y1="6.1" x2="56.8" y2="5.9"/>
+	</g>
+</g>
+<g id="icon-extern">
+	<polyline id="Stroke-1" class="st0" points="17.7,95.2 17.7,104.1 1,104.1 1,87.5 9.9,87.5 	"/>
+	<polyline id="Stroke-3_00000158030383455830849470000014754216906756738715_" class="st0" points="14.3,84.1 21,84.1 21,90.8 	"/>
+	<line id="Stroke-5" class="st0" x1="8.8" y1="96.3" x2="21" y2="84.1"/>
+</g>
+<g id="icon-download_00000143614546680732324590000000779606179235332522_">
+	<line id="Stroke-1_00000067932033690730853310000009252080156334769558_" class="st0" x1="69" y1="64" x2="51" y2="64"/>
+	
+		<g id="Group_00000054267885931390306540000009034630815883731374_" transform="translate(8.503643, 9.000000) rotate(90.000000) translate(-8.503643, -9.000000) translate(-0.496357, 2.000000)">
+		<polyline id="Stroke-3_00000002373550333195963680000008952564547241973168_" class="st0" points="55,-51 61.7,-44 55,-37 		"/>
+		<line id="Stroke-1_00000018223567024281788600000000043663681341318579_" class="st0" x1="45" y1="-43.9" x2="60.8" y2="-44.1"/>
+	</g>
+</g>
+<g id="icon-extern_00000051361517502830952130000016491331016674387619_">
+	<polyline id="Stroke-1_00000049907850950728031100000015041637421630626205_" class="st0" points="67.7,95.2 67.7,104.1 51,104.1 
+		51,87.5 59.9,87.5 	"/>
+	<polyline id="Stroke-3_00000086690177504438582140000012042014783211236530_" class="st0" points="67.5,81 74.1,81 74.1,87.7 	"/>
+	<line id="Stroke-5_00000099631501997655774960000001459229537895192253_" class="st0" x1="58.8" y1="96.3" x2="74.1" y2="81"/>
+</g>
+<g id="icon-arrow_00000104698555558422223830000006062235960111159431_">
+	<polyline id="Stroke-3_00000059288865902520160340000015116495393729542291_" class="st1" points="19.9,21 26.6,28 19.9,35 	"/>
+	<line class="st1" x1="1" y1="28" x2="25.8" y2="28"/>
+</g>
+<g id="icon-arrow_00000099628110464799183830000005147371227188514215_">
+	<polyline id="Stroke-3_00000065763655758238714120000017392828431232626314_" class="st0" points="7.7,121 1,128 7.7,135 	"/>
+	<line class="st0" x1="26.6" y1="128" x2="1.8" y2="128"/>
+</g>
+</svg>

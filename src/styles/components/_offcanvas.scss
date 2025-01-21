@@ -1,0 +1,180 @@
+/* ==========================================================================
+   Offcanvas trigger
+   ========================================================================== */
+
+.c-offcanvas-trigger {
+	position: absolute;
+	display: block;
+	top: 0;
+	right: $grid-container;
+    right: var(--grid-container);
+	width: 40px;
+	height: 40px;
+	margin: 0;
+	color: transparent;
+	transform: perspective(1px) translateZ(0);
+	transition: all 0.2s ease-in-out;
+	overflow: hidden;
+}
+
+.c-offcanvas-trigger-open {
+	display: none;
+}
+
+.c-offcanvas-trigger::before,
+.c-offcanvas-trigger::after {
+	content:'';
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 50%;
+}
+
+.c-offcanvas-trigger-open::before,
+.c-offcanvas-trigger-open::after {
+	width: 20px;
+	transition: width .2s ease-in-out;
+}
+
+.c-offcanvas-trigger-open::before {
+	height: 14px;
+	margin-top: -7px;
+	border-top: 2px solid $color-highlight;
+	border-bottom: 2px solid $color-highlight;
+    border-color: var(--color-highlight);
+}
+
+.c-offcanvas-trigger-open::after {
+	height: 2px;
+	background-color: $color-highlight;
+    background-color: var(--color-highlight);
+	margin-top: -1px;
+}
+
+.c-offcanvas-trigger-open:focus::after,
+.c-offcanvas-trigger-open:hover::after {
+	width: 15px;
+}
+
+.c-offcanvas-trigger-close::before,
+.c-offcanvas-trigger-close::after {
+	background-color: $color-highlight;
+    background-color: var(--color-highlight);
+    margin-top: -2px;
+    height: 2px;
+    width: 20px;
+    transition: all .5s;
+}
+
+.c-offcanvas-trigger-close::before {
+	transform: rotate(-45deg);
+}
+
+.c-offcanvas-trigger-close::after {
+	transform: rotate(45deg);
+}
+
+/* ==========================================================================
+   Offcanvas nav main container
+   ========================================================================== */
+
+.c-offcanvas-nav {
+	/*display: none;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: $bg-light;
+    background-color: var(--bg-light);
+	color: var(--text-color);
+	z-index: 10;
+	width: 0;
+	height: 0;
+	overflow-y: auto;
+	transition: height .2s ease-out 0s;
+}
+#open-navigation.navigation .c-offcanvas-nav
+#open-navigation:not(:target) .c-offcanvas-nav {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.c-offcanvas-inner {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	overflow-y: auto;
+}
+
+/* ==========================================================================
+   Offcanvas Content
+   ========================================================================== */
+.c-offcanvas-content {
+	padding-top: 1.5em;
+}
+
+.c-offcanvas-nav-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.c-offcanvas-nav-list li + li {
+	padding-top: 0.75em;
+}
+
+.c-offcanvas-nav-list a {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 0.25em;
+}
+
+.c-offcanvas-nav-list a::before {
+	content:'';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 0;
+	background-color: $border-basic;
+    background-color: var(--border-basic);
+	transition: all 0.2s linear;
+}
+
+.c-offcanvas-nav-list a:focus::before,
+.c-offcanvas-nav-list a:hover::before,
+.c-offcanvas-nav-list .current-menu-item a::before{
+	height: 8px;
+}
+
+/* ==========================================================================
+   Offcanvas nav open
+   ========================================================================== */
+#open-navigation.open,
+#open-navigation:target {
+    position: relative;
+    top: auto;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+	height: 100%;
+}
+
+#open-navigation.open,
+#open-navigation:target {
+	.c-offcanvas-nav {
+		width: 100%;
+		height: 100vh;
+		overflow-y: auto;
+	}
+	
+	.c-offcanvas-trigger-open {
+		display: none;
+	}
+}

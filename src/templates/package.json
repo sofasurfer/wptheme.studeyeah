@@ -1,0 +1,44 @@
+{
+  "name": "htmlcsssync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=18.13.0"
+  },
+  "volta": {
+    "node": "18.13.0",
+    "yarn": "1.22.19",
+    "npm": "8.12.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve --open",
+    "dev": "webpack serve --open",
+    "debug": "webpack serve --open --stats-children",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Neofluxe | Erin McGowan",
+  "license": "ISC",
+  "devDependencies": {
+    "add": "^2.0.6",
+    "css-loader": "^6.7.1",
+    "html-loader": "^4.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "lodash-template-webpack-loader": "^1.0.2",
+    "mini-css-extract-plugin": "^2.7.6",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3",
+    "webpackbar": "^5.0.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

@@ -1,0 +1,433 @@
+/* ==========================================================================
+   Form
+   ========================================================================== */
+/* safari form fix */
+input,
+input[type="text"],
+input[type="email"],
+textarea {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+	-webkit-box-shadow: none;
+}
+
+/* remove chrome autofill yellow color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-transition-delay: 2000s;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.c-form-item {
+	position: relative;
+	width: 100%;
+	padding-bottom: $spacing-s;
+    padding-bottom: var(--spacing-s);
+}
+
+/* ==========================================================================
+   formfields
+   ========================================================================== */
+
+.c-form-standard input[type="text"],
+.c-form-standard input[type="email"],
+.c-form-standard input[type="password"],
+.c-form-standard input[type="url"],
+.c-form-standard input[type="date"],
+.c-form-standard input[type="tel"],
+.c-form-standard textarea {
+	width: 100%;
+	border: solid 2px $border-form;
+    border-color: var(--border-form);
+	color: $text-color;
+    color: var(--text-color);
+	padding: 0.75em 10px;
+	background-color: $bg-content;
+    background-color: var(--bg-content);
+}
+
+.c-form-standard textarea {
+	min-height: 12em;
+}
+
+.c-form-standard input[type="text"]:focus,
+.c-form-standard input[type="email"]:focus,
+.c-form-standard input[type="password"],
+.c-form-standard input[type="url"]:focus,
+.c-form-standard input[type="date"]:focus,
+.c-form-standard input[type="tel"]:focus,
+.c-form-standard textarea:focus {
+	border-color: $border-form-focus;
+    border-color: var(--border-form-focus);
+	outline: none;
+}
+
+.c-form-standard input[type="text"]:disabled,
+.c-form-standard input[type="email"]:disabled,
+.c-form-standard input[type="password"],
+.c-form-standard input[type="url"]:disabled,
+.c-form-standard input[type="date"]:disabled,
+.c-form-standard input[type="tel"]:disabled,
+.c-form-standard textarea:disabled {
+	border-color: $form-disabled;
+	color: $form-disabled;
+    border-color: var(--form-disabled);
+	color: var(--form-disabled);
+}
+
+.c-form-standard .c-form-label-text {
+	display: block;
+	padding-bottom: 0.35em;
+}
+
+/* ==========================================================================
+   file button
+   ========================================================================== */
+
+.c-form-standard input[type=file] {
+	width: 100%;
+	padding: 0.75em 10px;
+	background-color: $bg-light;
+    background-color: var(--bg-light);
+    font-size: var(--font-size-body-small);
+}
+
+
+.c-form-standard input[type="file"]::file-selector-button {
+	display: inline-block;	
+	margin-right: 0.75em;
+	padding: 1.15em 24px 1.15em 24px;
+	border: 2px solid $text-color;
+    border-color: var(--text-color);
+	color: $text-color;
+    color: var(--text-color);
+	background-color: $bg-content;
+    background-color: var(--bg-content);
+	line-height: 1.2;
+    font-size: var(--font-size-body);
+	font-weight: bold;
+    font-weight: var(--font-weight-bold);
+	text-align: center;
+	transition: all 0.2s ease-out;
+}
+
+
+
+.c-form-standard input[type="file"]::file-selector-button:hover {
+	color: $text-color-light;
+    color: var(--text-color-light);
+	background-color: $bg-dark;
+    background-color: var(--bg-dark);
+}
+
+/* ==========================================================================
+   checkbox / radios
+   ========================================================================== */
+
+.c-form-standard .wpcf7-list-item {
+	display: block;
+	position: relative;
+}
+
+.c-form-standard .c-form-multiline .wpcf7-list-item {
+	display: inline-block;
+	padding-right: 1.6em;
+}
+
+.c-form-standard input[type="checkbox"],
+.c-form-standard input[type="radio"]{
+    margin: 4px 0 0;
+    margin-top: 0;
+    line-height: normal;
+}
+
+.c-form-standard input[type="checkbox"]:checked,
+.c-form-standard input[type="checkbox"]:not(:checked),
+.c-form-standard input[type="radio"]:checked,
+.c-form-standard input[type="radio"]:not(:checked){
+    position: absolute;
+    left: -9999px;
+}
+
+.c-form-standard input[type="checkbox"]+span,
+.c-form-standard input[type="radio"]+span,
+.c-form-standard input[type="checkbox"]+span,
+.c-form-standard input[type="radio"]+span {
+    margin-left: 0;
+    font-weight: normal;
+    overflow: hidden;
+}
+
+.c-form-standard input[type="checkbox"]:checked+span,
+.c-form-standard input[type="checkbox"]:not(:checked)+span,
+.c-form-standard input[type="radio"]:checked+span,
+.c-form-standard input[type="radio"]:not(:checked)+span{
+    position: relative;
+	display: inline-block;
+    padding-left: 50px;
+    padding-top: 0.55em;
+	line-height: 1.5;
+    cursor: pointer;
+    user-select: none;
+	min-height: 44px;
+}
+
+.c-form-standard input[type="checkbox"]:checked+span::before,
+.c-form-standard input[type="checkbox"]:not(:checked)+span::before,
+.c-form-standard input[type="radio"]:checked+span::before,
+.c-form-standard input[type="radio"]:not(:checked)+span::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.15em;
+    width: 38px;
+    height: 38px;
+    border: 2px solid $border-form;
+    border-color: var(--border-form);
+    background-color: $bg-content;
+    background-color: var(--bg-content);
+    transition: all 0.2s ease-in-out;
+}
+
+.c-form-standard input[type="radio"]:checked+span::before,
+.c-form-standard input[type="radio"]:not(:checked)+span::before{
+    border-radius: 50%;
+}
+
+.c-form-standard input[type="checkbox"]:focus+span::before,
+.c-form-standard input[type="radio"]:focus+span::before{
+    border-color: $border-form-focus;
+    border-color: var(--border-form-focus);
+    background-color: $bg-content;
+    background-color: var(--bg-content);
+}
+
+.c-form-standard input[type="checkbox"]:checked+span::before,
+.c-form-standard input[type="radio"]:checked+span::before {
+    background-color: $bg-content;
+    background-color: var(--bg-content);
+}
+
+.c-form-standard input[type="checkbox"]:checked+span::after,
+.c-form-standard input[type="checkbox"]:not(:checked)+span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(0.15em + 5px);
+    left: 11px;
+    transition: all .2s ease-in-out;
+    width: 16px;
+	height: 22px;
+	border: solid $color-highlight;
+    border-color: var(--color-highlight);
+	border-width: 0 4px 4px 0;
+	transform: rotate(45deg);
+}
+
+.c-form-standard input[type="radio"]:checked+span::after,
+.c-form-standard input[type="radio"]:not(:checked)+span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(0.15em + 9px);
+    left: 9px;
+    transition: all .2s ease-in-out;
+    height: 20px;
+    width: 20px;
+	border-radius: 50%;
+	background-color: $color-highlight;
+    background-color: var(--color-highlight);
+}
+
+.c-form-standard input[type="checkbox"]:not(:checked)+span::after{
+    opacity: 0;
+}
+
+.c-form-standard input[type="radio"]:not(:checked)+span::after{
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+.gform_fields input[type="checkbox"]:checked+span::after,
+.c-form-standard input[type="checkbox"]:checked+span::after{
+    opacity: 1;
+}
+
+.c-form-standard input[type="radio"]:checked+span::after{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.c-form-standard input[type="checkbox"]:disabled+span::before,
+.c-form-standard input[type="checkbox"]:disabled+span::after,
+.c-form-standard input[type="radio"]:disabled+span::before,
+.c-form-standard input[type="radio"]:disabled+span::after {
+	color: $form-disabled;
+    color: var(--form-disabled);
+	border-color: $form-disabled;
+    border-color: var(--form-disabled);
+}
+
+/* ==========================================================================
+   dropdown
+   ========================================================================== */
+
+.c-form-standard select {
+    display: block;
+	padding: 0.75em 30px 0.75em 10px !important;
+	width: 100%;
+	height: auto !important;
+	border: 2px solid $border-form;
+    border-color: var(--border-form);
+    border-radius: 0;
+	background: url("../../images/icon-form-arrow.svg") right center no-repeat;
+	background-color: $bg-content;
+    background-color: var(--bg-content);
+	color: $text-color;
+    color: var(--text-color);
+	font-size: 100%;
+	line-height: 1.5rem !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;	
+}
+
+.c-form-standard select:focus {
+    border-color: $border-form-focus;
+    border-color: var(--border-form-focus);
+	outline: none;
+}
+
+.c-form-standard select option {
+	padding: 0;
+	outline: none;
+}
+
+.c-form-standard select::-ms-expand {
+	display: none;
+}
+
+.c-form-standard select:disabled::-ms-expand {
+	color: $form-disabled;
+    color: var(--form-disabled);
+}
+
+.c-form-standard select:disabled,
+.c-form-standard select[disabled] {
+	color: $form-disabled;
+    color: var(--form-disabled);
+	border-color: $form-disabled;
+    border-color: var(--form-disabled);
+}
+
+/* ==========================================================================
+   wp7 error / ok message
+   ========================================================================== */
+
+.c-form-standard .wpcf7-response-output,
+.c-form-standard .wpcf7 form .wpcf7-response-output {
+	/*display: block;*/
+	background-color: $form-initial;
+    background-color: var(--form-initial);
+	padding: 1.5em 30px;
+	color: $text-color-light;
+    color: var(--text-color-light);
+	margin: 0 0 3em 0;
+	font-weight: bold;
+    font-weight: var(--font-weight-bold);
+	border: none;
+}
+
+.c-form-standard .wpcf7-not-valid-tip,
+.c-form-standard .screen-reader-response,
+.c-form-standard .wpcf7-response-output {
+	font-size: var(--font-size-body-s);
+}
+
+/* error */
+.c-form-standard .wpcf7-not-valid-tip,
+.c-form-standard .screen-reader-response {
+	color: $form-error;
+    color: var(--form-error);
+}
+
+.c-form-standard .wpcf7-not-valid-tip {
+	display: block;
+	padding-top: 0.35em;
+}
+
+.c-form-standard input.wpcf7-not-valid {
+	border-color: $form-error;
+    border-color: var(--form-error);
+}
+
+.c-form-standard form.invalid .wpcf7-response-output {
+	background-color: $form-error;
+    background-color: var(--form-error);
+}
+
+/* ok */
+.c-form-standard form.sent .wpcf7-response-output {
+	background-color: $form-ok;
+    background-color: var(--form-ok);
+}
+
+
+
+/* ==========================================================================
+   wp7 spinner
+   ========================================================================== */
+
+form.submitting .wpcf7-spinner {
+    visibility: visible;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.c-form-standard .wpcf7-spinner {
+    visibility: hidden;
+    display: inline-block;
+    margin: -4px 24px;
+    background: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid rgba(29,29,27,.3);
+    border-radius: 50%;
+    border-top-color: $color-highlight;
+    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+    opacity: 1;
+}
+
+.c-form-standard .wpcf7-spinner::before {
+    background: none;
+    width: 0;
+    height: 0;
+}

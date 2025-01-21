@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "nf/anchors",
+  "version": "0.1.0",
+  "title": "Anchor Block",
+  "category": "neofluxe",
+  "icon": "slides",
+  "description": "Anchor Block",
+  "supports": {
+    "html": false,
+    "align": true,
+    "anchor": true
+  },
+  "textdomain": "neofluxe",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}

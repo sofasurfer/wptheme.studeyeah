@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.c-footer {
+	padding-top: $spacing-s;
+    padding-bottom: $spacing-s;
+    padding-top: var(--spacing-s);
+    padding-bottom: var(--spacing-s);
+    background-color: $bg-light;
+    background-color: var(--bg-light);
+}
+
+.c-footer-disclaimer {
+	padding-top: 1.5em;
+}
+
+.c-footer-disclaimer-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.c-footer-disclaimer-list li {
+	display: inline-block;
+}
+
+.c-footer-disclaimer-list > li + li {
+	padding-left: 10px;
+}
+
+.c-footer a,
+.c-footer a:visited {
+	color: $text-color;
+    color: var(--text-color);
+}
+
+.c-footer a:hover,
+.c-footer a:focus {
+	color: $text-color;
+    color: var(--text-color);
+}

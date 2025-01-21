@@ -1,0 +1,159 @@
+/* ==========================================================================
+   Accordion Variables
+   ========================================================================== */
+
+.c-accordion {
+    --accordion-icon-padding: 48px;
+    
+    /* plus/minus icon */
+    --plus-length: 24px;
+    --plus-stroke: 2px;
+    --plus-stroke-position: 11px;
+    
+    /* chevron icon */
+    --chevron-width: 20px;
+    --chevron-height: 20px;
+    --chevron-border: 3px 3px 0 0;
+    --chevron-top-position: 1.3em;
+    
+}
+
+@media only screen and (max-width: 767px) {
+    .c-accordion {
+        --accordion-icon-padding: 32px;
+        
+        /* plus/minus icon */
+        --plus-length: 16px;
+        --plus-stroke: 2px;
+        --plus-stroke-position: 7px;
+        
+        /* chevron icon */
+        --chevron-width: 14px;
+        --chevron-height: 14px;
+        
+    }
+    
+    .c-accordion .c-accordion-inner {
+        --accordion-icon-padding: 0;
+    }
+}
+
+
+/* ==========================================================================
+   Accordion
+   ========================================================================== */
+
+.c-accordion-container {
+	position: relative;
+	width: 100%;
+	border-top: 1px solid $border-basic;
+	border-bottom: 1px solid $border-basic;
+    border-color: var(--border-basic);
+}
+
+.c-accordion-container + .c-accordion-container {
+	border-top: none;
+}
+
+.c-accordion-title {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	padding: 0.9em 0 0.9em var(--accordion-icon-padding);
+	transition: color 0.2s ease-in-out;
+}
+
+.c-accordion-title:hover {
+	color: $color-highlight;
+    color: var(--color-highlight);
+}
+
+.c-accordion-check {
+	position: absolute;
+	left: -9999px;
+}
+
+/* ==========================================================================
+   Accordion Icon Check plus/minus
+   ========================================================================== */
+
+/*.c-accordion-check:checked+label::after,
+.c-accordion-check:not(:checked)+label::after,
+.c-accordion-check:checked+label::before,
+.c-accordion-check:not(:checked)+label::before {
+    content: '';
+    display: block;
+    position: absolute;
+	top: 1.2em;
+}
+
+.c-accordion-check:checked+label::after,
+.c-accordion-check:not(:checked)+label::after {
+   	left: 0;
+	margin-top: var(--plus-stroke-position);
+	width: var(--plus-length);
+	height: var(--plus-stroke);
+	background-color: var(--color-highlight);
+}
+
+.c-accordion-check:checked+label::before,
+.c-accordion-check:not(:checked)+label::before {
+   left: var(--plus-stroke-position);
+	width: var(--plus-stroke);
+	height: var(--plus-length);
+	background-color: transparent;
+	transition: all .2s ease-in-out;
+}
+
+.c-accordion-check:not(:checked)+label::before {
+   	background-color: var(--color-highlight);
+}*/
+
+/* ==========================================================================
+   Accordion Icon Check chevron
+   ========================================================================== */
+
+
+.c-accordion-check:checked+label::after,
+.c-accordion-check:not(:checked)+label::after {
+    content: '';
+    display: block;
+    position: absolute;
+	left: 0;
+	top: var(--chevron-top-position);
+    width: var(--chevron-width);
+    height: var(--chevron-height);
+    border-style: solid;
+    border-width: 18px 14px 0 14px;
+    border-width: var(--chevron-border);
+    border-color: var(--color-highlight) var(--color-highlight) transparent transparent;
+	transition: all .2s ease-in-out;
+	transform: rotate(315deg);
+}
+
+.c-accordion-check:not(:checked)+label::after {
+    margin-top: calc(var(--chevron-height) / 2 * -1);
+	transform: rotate(135deg);
+}
+
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.c-accordion-content {
+	overflow: hidden;
+	max-height: 0;
+ 	transition: max-height 0.3s cubic-bezier(0,1,0,1);
+}
+
+.c-accordion-inner {
+	padding: 0 0 var(--spacing-s) var(--accordion-icon-padding);
+
+}
+
+.c-accordion-check:checked ~ .c-accordion-content {
+	max-height: 9999px;
+ 	transition: max-height 0.3s cubic-bezier(1,0,1,0);
+}

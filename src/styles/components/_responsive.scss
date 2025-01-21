@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Viewport
+   ========================================================================== */
+
+@-ms-viewport {
+	width: device-width;
+}
+
+/* ==========================================================================
+   Mediaqueries
+   ========================================================================== */
+
+@media only screen and (min-width:1330px) {
+	/* container max width */
+	.c-container {
+        max-width: 1320px;
+        margin-left: auto;
+		margin-right: auto;
+    }
+}
+
+/* header show offcanvas */
+@media only screen and (max-width:900px) {  
+	.c-offcanvas-trigger-open {
+		display: block;
+	}
+	
+	.c-main-nav,
+    .c-header-lang {
+		display: none;
+	}
+}
+
+@media only screen and (max-width:767px) {  
+	.c-text-only .c-col-8,
+	.c-main-title .c-col-8,
+	.c-section-title .c-col-8,
+	.c-quote .c-col-8,
+    .c-text-img .c-col-6 {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;    	
+	}
+    
+    .c-text-img .c-col-6:first-child {
+		padding-bottom: var(--spacing-s);   	
+	}
+}
