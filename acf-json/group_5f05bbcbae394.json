@@ -542,7 +542,7 @@
                             "label": "Icon",
                             "name": "icon",
                             "aria-label": "",
-                            "type": "select",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -551,19 +551,11 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": {
-                                "instagram": "Instagram",
-                                "fb": "Facebook",
-                                "linkedin": "Linkedin",
-                                "twitter": "Twitte"
-                            },
-                            "default_value": false,
-                            "return_format": "value",
-                            "multiple": 0,
-                            "allow_null": 0,
-                            "ui": 0,
-                            "ajax": 0,
+                            "default_value": "",
+                            "maxlength": "",
                             "placeholder": "",
+                            "prepend": "",
+                            "append": "",
                             "parent_repeater": "field_5f05bdcd6c93b"
                         },
                         {
@@ -606,5 +598,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1732889769
+    "modified": 1737475266
 }

@@ -1,51 +1,23 @@
-<?php
-
-$options  = get_fields( 'options' );
-$title    = $options['company']['company_title'];
-$address  = $options['company']['company_address'];
-$phone    = apply_filters( 'c_get_option', 'company_phone' );
-$email    = apply_filters( 'c_get_option', 'company_email' );
-
-?>
-
-</main>
-
-<footer class="c-footer" role="contentinfo">
-    <div class="c-container-wide c-line-top c-line-bottom">
-        <div class="c-container c-container-no-padding c-footer-main">
-            <div class="c-footer-main-address c-text-padding-inside">
-				<?= $title ?><br/>
-				<?= $address ?><br/>
-                <a href="tel:<?= $phone ?>"><?= $phone ?></a><br/>
-                <a href="mailto:<?= $email ?>"><?= $email ?></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="c-container c-container-no-padding c-footer-disclaimer">
-        <div class="c-row c-row-reverse">
-            <div class="c-col-6 c-text-right c-text-padding-var">
-				<?php wp_nav_menu(
-					array(
-						'theme_location' => 'footer-menu',
-						'container'      => false,
-						'menu_class'     => 'c-footer-disclaimer-list',
-					)
-				); ?>
-            </div>
-            <div class="c-col-6 c-text-padding">
-                &copy;<?= date( "Y" ) ?> <?= $title ?>
-            </div>
-
-        </div>
-    </div>
-
-	<?= wp_footer() ?>
-</footer>
-
-<div id="cookie-notice" class="c-cookie-notice c-text-block c-text-small">
-	<?= apply_filters( 'c_get_option', 'archive_cookie_message' ); ?>
-</div>
+    <footer>         
+    <p><a href="https://www.sofasurfer.org" target="_blank" title="Built by SofaSurfer">Built by SofaSurfer</a></p>
+    </footer>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <?= wp_footer() ?>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//piwik.sofasurfer.org/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '28']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Piwik Code -->
 
 <!-- cookie stuff -->
 <?php 

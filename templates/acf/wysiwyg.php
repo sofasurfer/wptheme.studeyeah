@@ -3,9 +3,10 @@
 $fields  = $site_element;
 $content = $fields['wysiwyg'];
 ?>
-
-<div class="c-container c-text-only">
-    <div class="c-text-block">
-		<?= $content ?>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      <?= $content ?>
+      </div>	
     </div>
 </div>

@@ -36,6 +36,6 @@
     "@wordpress/blocks": "^12.1.0",
     "@wordpress/components": "^23.1.0",
     "@wordpress/i18n": "^4.24.0",
-    "caniuse-lite": "^1.0.30001674"
+    "caniuse-lite": "^1.0.30001695"
   }
 }

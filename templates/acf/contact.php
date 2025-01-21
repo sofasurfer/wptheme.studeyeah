@@ -6,17 +6,17 @@ $address       = $options['company']['company_address'];
 $phone         = $options['company']['company_phone'];
 $phone_encoded = apply_filters( 'c_convert_phone_number', $phone );
 $email         = $options['company']['company_email'];
-$gmaps         = $options['google_maps'];
+$socialmedia_accounts   = apply_filters( 'c_get_option', 'socialmedia_accounts' );
 
 ?>
-
-<div class="c-container c-contact c-text-block">
-    <h3><?= __( 'Kontakt', 'neofluxe' ) ?></h3>
-    <p><strong><?= $title ?></strong><br/>
-		<?= $address ?></p>
-	<?php if ( isset( $gmaps ) ) { ?>
-        <p><a href="<?= $gmaps ?>"><?= __( 'Routenplaner (Link auf Google Map)', 'neofluxe' ) ?></a></p>
-	<?php } ?>
-    <a href="tel:<?= $phone_encoded ?>"><?= __( 'Tel.', 'neofluxe' ) ?> <?= $phone ?></a><br/>
-    <a href="mailto:<?= $email ?>"><?= $email ?></a>
-</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">              
+            <ul class="social-links">
+                <?php foreach($socialmedia_accounts as $account): ?>
+                <li><a href="<?= $account['link']['url'];?>" target="<?= $account['link']['target'];?>"><i class="fa <?= $account['icon'];?> fa-2x" aria-hidden="true"></i></a></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+</div> 

@@ -43,78 +43,49 @@
     <!-- Disable Skype browser-plugin -->
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
 
-<!-- header-->
-<header class="c-header <?=  do_shortcode("[c_option key='sticky_header']")? 'c-header-sticky':''; ?>" role="banner">
-    
-    <!-- header inner-->
-    <div class="c-container c-container-no-padding c-header-inner">
-        <div class="c-header-logo">
-            <a href="<?= get_home_url(); ?>">
-                <img src="<?=  do_shortcode("[c_option key='logo_image']"); ?>" alt="<?=  do_shortcode("[c_option key='company_title']"); ?>" />
-            </a>
-        </div>
-
-        <nav class="c-main-nav">
-            <!-- navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
             <?php wp_nav_menu(
                 array(
                     'theme_location' => 'header-menu',
                     'container'      => false,
-                    'menu_class'     => 'c-main-nav-list',
+                    'menu_class'     => 'navbar-nav',
                 )
             ); ?>
-        </nav>
-        
-        <div class="c-header-lang wpml-ls-legacy-list-horizontal">
-            <ul class="c-header-lang-list">
-                <li class="wpml-ls-current-language"><a class="wpml-ls-link" href="">DE</a></li>
-                <li><a href="">FR</a></li>
-            </ul>
         </div>
-
-        <!-- offcanvas trigger-->
-        <a href="#open-navigation" class="c-offcanvas-trigger c-offcanvas-trigger-open">
-            <span class="c-hide-visually">Menü öffnen</span>
-        </a>
     </div>
+</nav>
 
-    <!-- offcanvas nav-->
-    <nav class="c-offcanvas-nav">
-        <div class="c-offcanvas-inner">
-            <div class="c-container c-container-no-padding c-header-inner">
-                <!-- offcanvas trigger-->
-                <a href="#" class="c-offcanvas-trigger c-offcanvas-trigger-close">
-                    <span class="c-hide-visually">Menu schliessen</span>
-                </a>
-            </div>
-            <div class="c-container c-offcanvas-content">
-                <div class="c-row">
-                    <div class="c-col-12">
-                        <div class="c-offcanvas-lang wpml-ls-legacy-list-horizontal">
-                            <ul class="c-header-lang-list">
-                                <li class="wpml-ls-current-language"><a class="wpml-ls-link" href="">DE</a></li>
-                                <li><a href="">FR</a></li>
-                            </ul>
-                        </div>
-						<?php wp_nav_menu(
-							array(
-								'theme_location' => 'header-menu-offcanvas',
-								'container'      => false,
-								'menu_class'     => 'c-offcanvas-nav-list',
-                                'walker'         => new Overlay_Walker_Nav_Menu()
-							)
-						); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
+<div class="header">
+    <!--h1>Studeyeah</h1-->
+    <?php
+    $image_header = get_field('acf_header_image_desktop');
+    $image_header_mobile = get_field('acf_header_image_mobile');	 
+    $args = [
+        'class'            => 'img-fluid img-header',
+        'id'               => 'some-id',
+        'fallback_image_id' => $image_header_mobile,
+        'images'           => [
+            [
+            'id'    => $image_header,
+            'media' => '(min-width: 768px)',
+            'size'  => 'large'
+            ]
+        ]
+    ];
+    ?>
+    <?=  apply_filters('c_render_picturetag', $args); ?>		
 
+
+</div>
 
 <!-- content-->
 <main class="c-content" role="main">

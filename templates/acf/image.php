@@ -8,19 +8,19 @@ $caption    = $fields['caption'];
 
 
 <?php if( $fields['two'] ): ?>
-    <div class="c-container c-img-2col">
-        <div class="c-row">
-            <div class="c-col-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
                 <figure>
-                    <?= wp_get_attachment_image( $imageID, 'large' ) ?>
+                    <?= wp_get_attachment_image( $imageID, 'large', false, ['class' => 'img-fluid'] ) ?>
                     <?php if ( $caption ) { ?>
                         <figcaption class="c-legend"><?= $caption ?></figcaption>
                     <?php } ?>
                 </figure>
             </div>
-            <div class="c-col-6">
+            <div class="col-md-6">
                 <figure>
-                    <?= wp_get_attachment_image( $fields['image_2'], 'large' ) ?>
+                    <?= wp_get_attachment_image( $fields['image_2'], 'large', false, ['class' => 'img-fluid'] ) ?>
                     <?php if (  $fields['caption_2']) { ?>
                         <figcaption class="c-legend"><?= $fields['caption_2']?></figcaption>
                     <?php } ?>
@@ -29,21 +29,23 @@ $caption    = $fields['caption'];
         </div>       
     </div>
 <?php elseif( $fields['wide'] ): ?>
-    <div class="c-container c-asym-left-edgeless c-img-wide">
-        <figure class="c-asym-left-edgeless-img">
-            <?= wp_get_attachment_image( $imageID, 'large' ) ?>
+    <div class="w-100 vh-100">
+            <?= wp_get_attachment_image( $imageID, 'large', false, ['class' => 'img-fluid  w-100'] ) ?>
             <?php if ( $caption ) { ?>
                 <figcaption class="c-legend"><?= $caption ?></figcaption>
             <?php } ?>
-        </figure>
     </div>
 <?php else: ?>
-    <div class="c-container c-img-content">
-        <figure>
-            <?= wp_get_attachment_image( $imageID, 'large' ) ?>
-            <?php if ( $caption ) { ?>
-                <figcaption class="c-legend"><?= $caption ?></figcaption>
-            <?php } ?>
-        </figure>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <figure>
+                    <?= wp_get_attachment_image( $imageID, 'large', false, ['class' => 'img-fluid'] ) ?>
+                    <?php if ( $caption ) { ?>
+                        <figcaption class="c-legend"><?= $caption ?></figcaption>
+                    <?php } ?>
+                </figure>
+            </div>
+        </div>
     </div>
 <?php endif; ?>
