@@ -14,27 +14,22 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Debug SSH Key
-        run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
-          cat private_key
-
       - name: Use Node.js 18.13.0
         uses: actions/setup-node@v3
         with:
           node-version: 18.13.0
 
-      # - name: NPM | yarn - Caching 🚀
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: '**/node_modules'
-      #     key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: NPM | yarn - Caching 🚀
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
-      # - name: NPM | yarn - Install 🔴 🟠 🟡 🟢 🔵 🟣
-      #   run: yarn install
+      - name: NPM | yarn - Install 🔴 🟠 🟡 🟢 🔵 🟣
+        run: yarn install
 
-      # - name: NPM | yarn - Build for production 🏗🕌
-      #   run: yarn build
+      - name: NPM | yarn - Build for production 🏗🕌
+        run: yarn build
 
       - name: RSync Deployments 🚚
         uses: burnett01/rsync-deployments@6.0.0
