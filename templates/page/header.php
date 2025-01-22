@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> id="open-navigation" class="navigation k-deployment" >
+<html <?php language_attributes(); ?> id="open-navigation" class="navigation k-deployment-2" >
 <head>
 	<?php
 	$og_info = apply_filters( 'c_get_ogobj', '' );
