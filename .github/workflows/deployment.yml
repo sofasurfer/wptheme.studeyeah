@@ -14,8 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Debug SSH Connection
-        run: ssh -i <(echo "${{ secrets.SSH_PRIVATE_KEY }}")
+      - name: Debug SSH Key
+        run: |
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
+          cat private_key
 
       - name: Use Node.js 18.13.0
         uses: actions/setup-node@v3
