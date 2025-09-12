@@ -157,6 +157,10 @@ a:hover{
   display: inline-block;
 }
 
+.menu-item{
+  margin: 0 0.5em;
+}
+
 .nav-main li a:target {
   color: white;
   text-decoration: none;
@@ -224,7 +228,10 @@ body .jumbotron.header ul.nav-main a.active{
 }
 .stream-list a:hover{
   background-color: transparent!important;
+}
 
+.stream-list img.img-fluid  {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(22%) saturate(1166%) hue-rotate(309deg) brightness(95%) contrast(90%);
 }
 
 #pastcheck{
