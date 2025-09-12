@@ -4,6 +4,16 @@
 
 */
 @import url('https://fonts.googleapis.com/css?family=Shrikhand|Arvo');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Outfit:wght@100..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+// $color-highlight: rgb(2017, 124, 164);
+// $color-highlight: #C94868;
+$color-highlight: #BF4E6D;
+$color-bg: #F2AECE;
+$text-color: #BF4E6D;
+// $title-font: "Covered By Your Grace", cursive;
+$title-font: "Shantell Sans", cursive;
 
 html { 
   height:100%;
@@ -19,6 +29,19 @@ body{
   margin-bottom: 100px;
   padding-bottom: 100px;
   overflow-x: hidden;
+  background-color: $color-bg;
+  color: $text-color;
+}
+
+.menu-item-link{
+  font-family: $title-font;
+  /*
+    text-shadow: 
+      1px 1px 0 white,
+    -1px 1px 0 white,
+      1px -1px 0 white,
+    -1px -1px 0 white;
+  */
 }
 
 .img-header{
@@ -41,8 +64,15 @@ body{
 }
 
 .c-lead{
-  font-size: 1.5em;  
+  font-size: 1.2em;  
 }
+
+.c-small{
+  margin-top: 1em;
+  font-size: 0.5em;
+  text-align: left;
+}
+
 .jumbotron.footer{
     margin-top: 2em;
     margin-bottom: 0px;
@@ -67,7 +97,7 @@ body{
 }
 /*.jumbotron h1,
 h1{
-    color: #DC143C;
+    color: $color-highlight;
     font-weight: bolder;
     font-size: 4em;    
     margin-top: 30px;  
@@ -76,19 +106,20 @@ h1{
 }*/
 h1,
 h2{
-    color: #DC143C;
+    color: white;
     margin-top: 2em;  
     margin-bottom: 1em;  
-    font-size: 2em;    
-    font-family: 'Shrikhand', serif;
+    font-size: 4em;    
+    // font-family: 'Shrikhand', serif;
+    font-family: $title-font;
 }
 h3{
-    color: #DC143C;
+    color: $color-highlight;
 }
 a{
   padding: 2px 5px;
   margin-left: -5px;
-  color: #DC143C;
+  color: $color-highlight;
   padding: 5px 10px;
 
 }
@@ -96,7 +127,7 @@ a:hover{
   color: white;
   text-decoration: none;
   border-radius: 2px;
-  background-color: #DC143C!important;
+  background-color: $color-highlight!important;
   -webkit-transition: background-color 500ms linear;
   -ms-transition: background-color 500ms linear;
   transition: background-color 500ms linear;
@@ -130,7 +161,7 @@ a:hover{
   color: white;
   text-decoration: none;
   border-radius: 2px;
-  background-color: #DC143C!important;
+  background-color: $color-highlight!important;
   -webkit-transition: background-color 500ms linear;
   -ms-transition: background-color 500ms linear;
   transition: background-color 500ms linear;
@@ -181,7 +212,7 @@ body .jumbotron.header ul.nav-main a.active{
   color: white;
   text-decoration: none;
   border-radius: 2px;
-  background-color: #DC143C!important;
+  background-color: $color-highlight!important;
   -webkit-transition: background-color 500ms linear;
   -ms-transition: background-color 500ms linear;
   transition: background-color 500ms linear;
@@ -204,6 +235,20 @@ h3 label{
   cursor: pointer;
 }
 
+table, td{
+  color: $text-color!important;
+  background-color: $color-bg!important;
+}
+
+table.table.table-hover > tbody > tr:hover > td,
+table.table.table-hover > tbody > tr:hover > th {
+  color: white!important;
+  background-color: $color-highlight !important;
+  a{
+    color:white;
+  }
+}
+
 table.table-past{
   display: none;
   opacity: 0;
@@ -212,7 +257,7 @@ table.table-past{
 
 .canceled-show{
   text-decoration: line-through;
-  text-decoration-color: #DC143C;
+  text-decoration-color: $color-highlight;
 }
 
 #pastcheck:checked + table.table-past{
@@ -222,7 +267,10 @@ table.table-past{
 }
 
 
-@media screen and (min-width: 1200px){
+@media screen and (max-width: 1400px){
+    body{
+      font-size: 1.5em;
+    }
     .jumbotron{
       background-position: center center;
     }
@@ -239,7 +287,7 @@ table.table-past{
     }
     body.sticky .jumbotron.header h1{
       display: inline-block;
-      font-size: 2em;
+      // font-size: 1.5em;
       margin-top: 0px;
       padding-top: 0px;
       line-height: 0px;
@@ -261,17 +309,12 @@ table.table-past{
 
 @media screen and (min-width: 0px) and (max-width: 900px){
     body{
-      font-size: 1.5em;
+      font-size: 1em;
     }
     h1,
     .header h1{
-        font-size: 2em; 
         margin-top: 20px;    
 
-    }
-    h2,
-    .header h2{
-        font-size: 1.2em; 
     }
     .logo{
         margin-bottom: 100px;

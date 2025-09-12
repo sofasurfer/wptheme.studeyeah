@@ -74,6 +74,12 @@ class WysiwygSettings {
 				'classes'  => 'c-lead',
 				'wrapper'  => false,
 			),
+			array(
+				'title'    => 'Small',
+				'selector' => 'p',
+				'classes'  => 'c-small',
+				'wrapper'  => false,
+			),
 		);
 
 		$settings['style_formats'] = json_encode( $style_formats );

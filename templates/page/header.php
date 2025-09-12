@@ -50,7 +50,7 @@
 </head>
 <body <?php body_class(); ?> >
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid">
         <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
             <?php wp_nav_menu(
