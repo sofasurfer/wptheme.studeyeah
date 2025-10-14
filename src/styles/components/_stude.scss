@@ -12,8 +12,10 @@
 $color-highlight: #BF4E6D;
 $color-bg: #F2AECE;
 $text-color: #BF4E6D;
+$title-color: #BF4E6D;
+
 // $title-font: "Covered By Your Grace", cursive;
-$title-font: "Shantell Sans", cursive;
+$title-font: "Arvo", cursive;
 
 html { 
   height:100%;
@@ -106,12 +108,21 @@ h1{
 }*/
 h1,
 h2{
-    color: white;
+    color: $title-color;
     margin-top: 2em;  
     margin-bottom: 1em;  
     font-size: 4em;    
     // font-family: 'Shrikhand', serif;
     font-family: $title-font;
+
+    // text-decoration: underline;
+
+    // text-shadow: 
+    //   -2px -2px 0 white,
+    //   2px -2px 0 white,
+    //   -2px  2px 0 white,
+    //   2px  2px 0 white;
+
 }
 h3{
     color: $color-highlight;
