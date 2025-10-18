@@ -104,14 +104,15 @@ h1{
     margin-bottom: 60px;  
     font-family: 'Shrikhand', cursive;
 }*/
+
 h1,
 h2{
     color: white;
     margin-top: 2em;  
     margin-bottom: 1em;  
     font-size: 4em;    
-    // font-family: 'Shrikhand', serif;
-    font-family: $title-font;
+    font-family: 'Shrikhand', serif;
+    // font-family: $title-font;
 }
 h3{
     color: $color-highlight;
