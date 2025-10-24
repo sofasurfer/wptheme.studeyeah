@@ -4,18 +4,20 @@
 
 */
 @import url('https://fonts.googleapis.com/css?family=Shrikhand|Arvo');
-@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Outfit:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Outfit:wght@100..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Shrikhand|Arvo&family=Poetsen+One&family=Luckiest+Guy&family=Poetsen+On&family=Outfit:wght@100..900&family=Wendy+One&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 // $color-highlight: rgb(2017, 124, 164);
 // $color-highlight: #C94868;
 $color-highlight: #BF4E6D;
 $color-bg: #F2AECE;
 $text-color: #BF4E6D;
-$title-color: #BF4E6D;
-
+$color-active: yellow;
 // $title-font: "Covered By Your Grace", cursive;
-$title-font: "Arvo", cursive;
+$title-font: "Wendy One", sans-serif;
+// $title-font: "Luckiest Guy", sans-serif;
+// $title-font: "Poetsen One", sans-serif;
+
+$title-color: white;
 
 html { 
   height:100%;
@@ -139,14 +141,35 @@ a{
 
 }
 a:hover{
-  color: yellow;
+  color: $color-active;
   text-decoration: none;
   border-radius: 2px;
-  // background-color: $color-highlight!important;
-  -webkit-transition: background-color 500ms linear;
-  -ms-transition: background-color 500ms linear;
-  transition: background-color 500ms linear;
-    filter: brightness(0) saturate(100%) invert(77%) sepia(98%) saturate(502%) hue-rotate(359deg) brightness(102%) contrast(101%);
+
+  &.c-btn-color{
+    // background-color: $color-highlight!important;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+      filter: brightness(0) saturate(100%) invert(77%) sepia(98%) saturate(502%) hue-rotate(359deg) brightness(102%) contrast(101%);
+  }
+}
+
+.c-btn{
+  color: $color-active;
+  padding: 5px 10px;
+  border: solid 1px $color-active;
+  border-radius: 1rem;
+  text-decoration: none;
+  margin: 2rem;
+  display:inline-block;
+  // background-color: aqua;
+
+  &:hover{
+    color: $text-color;
+    border: solid 1px $color-highlight;
+    background-color: $color-active;
+    border-radius: 1rem;
+  }
 }
 
 .img-mobile{
