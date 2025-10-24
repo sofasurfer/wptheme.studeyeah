@@ -12,8 +12,10 @@
 $color-highlight: #BF4E6D;
 $color-bg: #F2AECE;
 $text-color: #BF4E6D;
+$title-color: #BF4E6D;
+
 // $title-font: "Covered By Your Grace", cursive;
-$title-font: "Shantell Sans", cursive;
+$title-font: "Arvo", cursive;
 
 html { 
   height:100%;
@@ -107,12 +109,21 @@ h1{
 
 h1,
 h2{
-    color: white;
+    color: $title-color;
     margin-top: 2em;  
     margin-bottom: 1em;  
     font-size: 4em;    
-    font-family: 'Shrikhand', serif;
-    // font-family: $title-font;
+    // font-family: 'Shrikhand', serif;
+    font-family: $title-font;
+
+    // text-decoration: underline;
+
+    // text-shadow: 
+    //   -2px -2px 0 white,
+    //   2px -2px 0 white,
+    //   -2px  2px 0 white,
+    //   2px  2px 0 white;
+
 }
 h3{
     color: $color-highlight;
@@ -122,16 +133,20 @@ a{
   margin-left: -5px;
   color: $color-highlight;
   padding: 5px 10px;
+  transition: color 0.3s ease;  
+  filter: none;
+  transition: filter 0.3s ease;
 
 }
 a:hover{
-  color: white;
+  color: yellow;
   text-decoration: none;
   border-radius: 2px;
-  background-color: $color-highlight!important;
+  // background-color: $color-highlight!important;
   -webkit-transition: background-color 500ms linear;
   -ms-transition: background-color 500ms linear;
   transition: background-color 500ms linear;
+    filter: brightness(0) saturate(100%) invert(77%) sepia(98%) saturate(502%) hue-rotate(359deg) brightness(102%) contrast(101%);
 }
 
 .img-mobile{
@@ -232,7 +247,12 @@ body .jumbotron.header ul.nav-main a.active{
 }
 
 .stream-list img.img-fluid  {
+  transition: filter 0.3s ease;
   filter: brightness(0) saturate(100%) invert(39%) sepia(22%) saturate(1166%) hue-rotate(309deg) brightness(95%) contrast(90%);
+}
+
+.stream-list img.img-fluid:hover {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(98%) saturate(502%) hue-rotate(359deg) brightness(102%) contrast(101%);
 }
 
 #pastcheck{

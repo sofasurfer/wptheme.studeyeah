@@ -43,6 +43,11 @@
     <!-- Disable Skype browser-plugin -->
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Outfit:wght@100..900&family=Poetsen+One&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Wendy+One&display=swap" rel="stylesheet">
+
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -50,42 +55,3 @@
 </head>
 <body <?php body_class(); ?> >
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container-fluid">
-        <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
-            <?php wp_nav_menu(
-                array(
-                    'theme_location' => 'header-menu',
-                    'container'      => false,
-                    'menu_class'     => 'navbar-nav',
-                )
-            ); ?>
-        </div>
-    </div>
-</nav>
-
-<div class="header">
-    <!--h1>Studeyeah</h1-->
-    <?php
-    $image_header = get_field('acf_header_image_desktop');
-    $image_header_mobile = get_field('acf_header_image_mobile');	 
-    $args = [
-        'class'            => 'img-fluid img-header',
-        'id'               => 'some-id',
-        'fallback_image_id' => $image_header_mobile,
-        'images'           => [
-            [
-            'id'    => $image_header,
-            'media' => '(min-width: 768px)',
-            'size'  => 'large'
-            ]
-        ]
-    ];
-    ?>
-    <?=  apply_filters('c_render_picturetag', $args); ?>		
-
-
-</div>
-
-<!-- content-->
-<main class="c-content" role="main">

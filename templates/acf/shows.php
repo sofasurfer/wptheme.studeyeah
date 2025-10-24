@@ -1,7 +1,7 @@
 <?php
 $url = 'https://www.yagwud.com/cms/wp-admin/admin-ajax.php?action=events_list&all=true&bid='.$site_element['artist_id'];
-$content = file_get_contents($url);
-$json = json_decode($content, true);
+//$content = file_get_contents($url);
+//$json = json_decode($content, true);
 
 // echo("<pre>");
 // print_r($json['shows']);
