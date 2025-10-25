@@ -49,10 +49,6 @@ class AdminSettings {
 	*/
 	public function my_custom_admin_css() {
 		echo '<style>
-        .acf-fc-layout-handle{
-            color: white!important;
-            background-color: #0073aa;
-        }
         p.c-lead{
             font-size: 2rem;
         }

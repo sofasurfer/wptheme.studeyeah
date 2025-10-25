@@ -5,7 +5,7 @@
                 <figure>
                 <?= wp_get_attachment_image($record['cover'], 'full', false, ['class' => 'img-fluid']);?>
                 </figure>
-                <p><a href="<?= $record['link']['url'];?>" target="<?= $record['link']['target'];?>"><?= $record['link']['title'];?></a></p>
+                <p><a href="<?= $record['link']['url'];?>" target="<?= $record['link']['target'];?>" class="c-btn"><?= $record['link']['title'];?></a></p>
             </div>
         <?php endforeach; ?>
     </div>
