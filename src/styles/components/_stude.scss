@@ -154,21 +154,22 @@ a:hover{
   }
 }
 
-.c-btn{
+a.c-btn{
+  font-family: $title-font;
   color: $color-active;
+  font-size: 3rem;
   padding: 5px 10px;
-  border: solid 1px $color-active;
+  border: solid 4px $color-active;
   border-radius: 1rem;
   text-decoration: none;
   margin: 2rem;
   display:inline-block;
-  // background-color: aqua;
+  background-color: $text-color;
 
   &:hover{
     color: $text-color;
-    border: solid 1px $color-highlight;
+    border: solid 4px $color-highlight;
     background-color: $color-active;
-    border-radius: 1rem;
   }
 }
 
@@ -293,10 +294,10 @@ table, td{
 
 table.table.table-hover > tbody > tr:hover > td,
 table.table.table-hover > tbody > tr:hover > th {
-  color: white!important;
-  background-color: $color-highlight !important;
+  // color: white!important;
+  background-color: $color-active !important;
   a{
-    color:white;
+    // color:white;
   }
 }
 

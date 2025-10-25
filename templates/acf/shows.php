@@ -1,7 +1,17 @@
 <?php
-$url = 'https://www.yagwud.com/cms/wp-admin/admin-ajax.php?action=events_list&all=true&bid='.$site_element['artist_id'];
-//$content = file_get_contents($url);
-//$json = json_decode($content, true);
+$url = 'https://www.yagwud.com/cms/wp-admin/admin-ajax.php?action=events_list&bid='.$site_element['artist_id'];
+// $content = file_get_contents($url);
+// $json = json_decode($content, true);
+
+$response = wp_remote_get( $url );
+
+if ( is_wp_error( $response ) ) {
+    // Handle error
+    error_log( $response->get_error_message() );
+} else {
+    $body = wp_remote_retrieve_body( $response );
+    $json = json_decode( $body, true );
+}
 
 // echo("<pre>");
 // print_r($json['shows']);
